@@ -375,67 +375,96 @@
         space to explore ideas, document discoveries, and reflect on the things I find interesting or useful in my work.
       </p>
 
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- List -->
+      <div class="divide-y divide-gray-800">
 
-        <!-- Blog Post 1 -->
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Have you tried .NET Aspire?</h3>
-          <p class="text-sm text-gray-400 mb-2">Discover what .NET Aspire is and how it can be used. This post shows a
-            file-processing workflow built with .NET 9, integrating Azure Services, databases, and cache.</p>
-          <span class="text-xs text-gray-500">Dec 2024</span>
-          <a href="https://medium.com/@dianper/have-you-tried-net-aspire-ce8bc869baeb" target="_blank"
-            class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
-        </div>
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <p class="text-sm mb-1 text-gray-500">Dec 2024</p>
+            <h4 class="font-medium text-indigo-300 transition">
+              Have you tried .NET Aspire?
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Discover what .NET Aspire is and how it can be used. This post shows a file-processing workflow built with
+              .NET 9, integrating Azure Services, databases, and cache.
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-sm whitespace-nowrap sm:pt-1">
+            <a href="https://medium.com/@dianper/have-you-tried-net-aspire-ce8bc869baeb"
+              class="text-indigo-400 font-medium hover:text-indigo-300 transition">
+              Read →
+            </a>
+          </div>
 
-        <!-- Blog Post 2 -->
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Embedding Superset Dashboards with ClickHouse Data into
-            .NET Web Application: A Step-by-Step Guide</h3>
-          <p class="text-sm text-gray-400 mb-2">Learn how to embed a Superset dashboard with a ClickHouse dataset into a
-            .NET web application, with a brief introduction to both tools.</p>
-          <span class="text-xs text-gray-500">Apr 2024</span>
-          <a href="https://medium.com/@dianper/embedding-superset-dashboards-with-clickhouse-data-into-net-web-application-a-step-by-step-guide-dcc1bb1c104b"
-            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
-        </div>
+        </article>
 
-        <!-- Blog Post 3 -->
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Implementing GraphQL API Gateway in .NET 6 + Hot
-            Chocolate v12 + Redis</h3>
-          <p class="text-sm text-gray-400 mb-2">Another post in the GraphQL series, showing how to implement a GraphQL
-            API Gateway using the Federated Schema approach.</p>
-          <span class="text-xs text-gray-500">Oct 2022</span>
-          <a href="https://dianper.medium.com/implementing-graphql-api-gateway-in-net-6-hot-chocolate-v12-redis-1a0ac12f340c"
-            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
-        </div>
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <p class="text-sm mb-1 text-gray-500">Apr 2024</p>
+            <h4 class="font-medium text-indigo-300 transition">
+              Superset Dashboards in .NET with ClickHouse
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Learn how to embed a Superset dashboard with a ClickHouse dataset into a .NET web application, with a
+              brief introduction to both tools.
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-sm whitespace-nowrap sm:pt-1">
+            <a href="https://medium.com/@dianper/embedding-superset-dashboards-with-clickhouse-data-into-net-web-application-a-step-by-step-guide-dcc1bb1c104b"
+              class="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition" target="_blank">
+              Read →
+            </a>
+          </div>
+        </article>
 
-        <!-- Blog Post 4 -->
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Building GraphQL API in .NET Core + HotChocolate +
-            MongoDB + Docker [Part 2]</h3>
-          <p class="text-sm text-gray-400 mb-2">Part 2 of the GraphQL Web API series. This session covers Mutations and
-            Subscriptions — recommended to read Part 1 first for full context.</p>
-          <span class="text-xs text-gray-500">Apr 2021</span>
-          <a href="https://dianper.medium.com/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-2-ebfb7e7fe3e9"
-            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
-        </div>
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <p class="text-sm mb-1 text-gray-500">Oct 2022</p>
+            <h4 class="font-medium text-indigo-300 transition">
+              Implementing GraphQL API Gateway in .NET 6 + HotChocolate v12 + Redis
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Learn how to embed a Superset dashboard with a ClickHouse dataset into a .NET web application, with a
+              brief introduction to both tools.
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-sm whitespace-nowrap sm:pt-1">
+            <a href="https://dianper.medium.com/implementing-graphql-api-gateway-in-net-6-hot-chocolate-v12-redis-1a0ac12f340c"
+              class="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition" target="_blank">
+              Read →
+            </a>
+          </div>
+        </article>
 
-        <!-- Blog Post 5 -->
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Building GraphQL API in .NET Core + HotChocolate +
-            MongoDB + Docker [Part 1]</h3>
-          <p class="text-sm text-gray-400 mb-2">Learn how to build a GraphQL Web API in .NET Core using HotChocolate and
-            MongoDB, running in Docker. This first part covers queries, types, and resolvers, with Mutations and
-            Subscriptions explained in the next posts.</p>
-          <span class="text-xs text-gray-500">Mar 2021</span>
-          <a href="https://medium.com/@dianper/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-1-d00a20eb0ff0"
-            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
-        </div>
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <p class="mb-1 text-sm text-gray-500">Apr 2021</p>
+            <h4 class="font-medium text-indigo-300 transition">
+              Building GraphQL API in .NET Core + HotChocolate + MongoDB + Docker [Part 2]
+            </h4>
+          </div>
+          <div class="flex items-center gap-4 text-sm whitespace-nowrap sm:pt-1">
+            <a href="https://dianper.medium.com/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-2-ebfb7e7fe3e9"
+              class="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition" target="_blank">
+              Read →
+            </a>
+          </div>
+        </article>
+
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <p class="mb-1 text-sm text-gray-500">Mar 2021</p>
+            <h4 class="font-medium text-indigo-300 transition">
+              Building GraphQL API in .NET Core + HotChocolate + MongoDB + Docker [Part 1]
+            </h4>
+          </div>
+          <div class="flex items-center gap-4 text-sm whitespace-nowrap sm:pt-1">
+            <a href="https://medium.com/@dianper/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-1-d00a20eb0ff0"
+              class="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition" target="_blank">
+              Read →
+            </a>
+          </div>
+        </article>
 
       </div>
     </div>
@@ -515,36 +544,47 @@
         professional journey.
       </p>
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="font-semibold text-indigo-300 mb-1">Clean Code</h3>
-          <span class="text-sm text-gray-400">by Robert C. Martin</span>
-          <p class="text-gray-500">A practical guide on writing readable, maintainable, and efficient code. Reinforced
-            best practices and the importance of craftsmanship in software development.</p>
-        </div>
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="font-semibold text-indigo-300 mb-1">Clean Architecture</h3>
-          <span class="text-sm text-gray-400">by Robert C. Martin</span>
-          <p class="text-gray-500">Explores principles and patterns for designing flexible, maintainable, and scalable
-            software systems. Highlights the importance of separating concerns and building resilient architecture.</p>
-        </div>
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="font-semibold text-indigo-300 mb-1">Head First Design Patterns</h3>
-          <span class="text-sm text-gray-400">by Eric Freeman & Elisabeth Robson</span>
-          <p class="text-gray-500">An engaging guide to understanding common software design patterns. Focuses on
-            practical examples and real-world applications to improve code structure and maintainability.</p>
-        </div>
-        <div
-          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-          <h3 class="font-semibold text-indigo-300 mb-1">The Pragmatic Programmer</h3>
-          <span class="text-sm text-gray-400">by Andrew Hunt & David Thomas</span>
-          <p class="text-gray-500">A practical guide for software developers on best practices, problem-solving, and
-            continuous improvement. Emphasizes craftsmanship, adaptability, and pragmatic approaches to everyday coding
-            challenges.</p>
-        </div>
+      <!-- List -->
+      <div class="divide-y divide-gray-800">
+
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <h4 class="font-medium text-indigo-300 transition">Clean Code</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              A practical guide on writing readable, maintainable, and efficient code. Reinforced best practices and the importance of craftsmanship in software development.
+            </p>
+            <p class="text-sm mb-1 text-gray-500">Robert C. Martin</p>
+          </div>
+        </article>
+
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <h4 class="font-medium text-indigo-300 transition">
+              Clean Architecture
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Explores principles and patterns for designing flexible, maintainable, and scalable software systems. Highlights the importance of separating concerns and building resilient architecture.
+            </p>
+            <p class="text-sm mb-1 text-gray-500">Robert C. Martin</p>
+          </div>
+        </article>
+
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <h4 class="font-medium text-indigo-300 transition">Head First Design Patterns</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">An engaging guide to understanding common software design patterns. Focuses on practical examples and real-world applications to improve code structure and maintainability.</p>
+            <p class="text-sm mb-1 text-gray-500">Eric Freeman & Elisabeth Robson</p>
+          </div>
+        </article>
+
+        <article class="py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 group">
+          <div class="space-y-1">
+            <h4 class="font-medium text-indigo-300 transition">The Pragmatic Programmer</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">A practical guide for software developers on best practices, problem-solving, and continuous improvement. Emphasizes craftsmanship, adaptability, and pragmatic approaches to everyday coding challenges.</p>
+            <p class="text-sm mb-1 text-gray-500">Andrew Hunt & David Thomas</p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
