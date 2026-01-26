@@ -1,409 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego Pereira — Software Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Subtle animated background */
-      .bg-grid {
-        background-image:
-          linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-        background-size: 40px 40px;
-      }
 
-      .code-bg::before {
-        content: "<html>\A  <body>\A    <backend>\A      scalable()\A    </backend>\A  </body>\A</html>";
-        white-space: pre;
-        position: absolute;
-        inset: 0;
-        font-family: monospace;
-        font-size: 0.9rem;
-        line-height: 1.8;
-        color: rgba(255,255,255,0.04);
-        padding: 2rem;
-        pointer-events: none;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Pereira — Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Subtle animated background */
+    .bg-grid {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
 
-  <body class="bg-black text-gray-200 scroll-smooth">
+    .code-bg::before {
+      content: "<html>\A  <body>\A    <backend>\A      scalable()\A    </backend>\A  </body>\A</html>";
+      white-space: pre;
+      position: absolute;
+      inset: 0;
+      font-family: monospace;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.04);
+      padding: 2rem;
+      pointer-events: none;
+    }
+  </style>
+</head>
 
-    <!-- HERO -->
-    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-grid">
-      <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-purple-600/10 to-cyan-600/20 blur-3xl"></div>
+<body class="bg-black text-gray-200 scroll-smooth">
 
-      <div class="relative z-10 max-w-5xl w-full grid md:grid-cols-[auto_1fr] gap-10 items-center">
-        
-        <!-- PHOTO -->
-        <div class="flex justify-center md:justify-start">
-          <div class="relative">
-            <div class="absolute inset-0 rounded-full bg-indigo-500/30 blur-xl"></div>
-            <img
-              src="assets/me.png"
-              alt="Profile photo"
-              class="relative w-44 h-44 md:w-56 md:h-56 rounded-full object-cover border-2 border-indigo-400 shadow-2xl"
-            />
-          </div>
-        </div>
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-grid">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-purple-600/10 to-cyan-600/20 blur-3xl"></div>
 
-        <!-- TEXT -->
-        <div class="text-center md:text-left space-y-6">
-          <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
-            Hi, I'm <span class="text-indigo-400">Diego Pereira</span>
-          </h1>
-          <p class="text-xl text-gray-400 leading-relaxed max-w-2xl">
-            Senior Backend Software Engineer.  
-            Born in São Paulo 🇧🇷 — living in Porto 🇵🇹 since 2018.  
-            I build scalable systems and enjoy good coffee, craft beer, and traveling.
-          </p>
+    <div class="relative z-10 max-w-5xl w-full grid md:grid-cols-[auto_1fr] gap-10 items-center">
 
-          <!-- BUTTONS -->
-          <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
-            <a href="#story" class="px-6 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20">
-              About me
-            </a>
-            <a href="#tech" class="px-6 py-2 rounded-lg border border-gray-700 hover:border-indigo-400 transition">
-              Tech stack
-            </a>
-          </div>
-
-          <!-- SOCIAL LINKS -->
-          <div class="flex justify-center md:justify-start gap-6 mt-6">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/dianper" target="_blank" class="text-gray-400 hover:text-indigo-400 transition">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13 11.25h-3v-5c0-1.25-1-2.25-2.25-2.25s-2.25 1-2.25 2.25v5h-3v-10h3v1.35c.69-.9 1.83-1.35 2.85-1.35 2.25 0 4.15 1.9 4.15 4.25v5.75z"/>
-              </svg>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/dianper" target="_blank" class="text-gray-400 hover:text-indigo-400 transition">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.333-5.466-5.932 0-1.31.468-2.38 1.236-3.222-.124-.304-.536-1.53.117-3.18 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.65.243 2.876.12 3.18.77.842 1.234 1.913 1.234 3.222 0 4.61-2.804 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
+      <!-- PHOTO -->
+      <div class="flex justify-center md:justify-start">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-indigo-500/30 blur-xl"></div>
+          <img src="assets/me.png" alt="Profile photo"
+            class="relative w-44 h-44 md:w-56 md:h-56 rounded-full object-cover border-2 border-indigo-400 shadow-2xl" />
         </div>
       </div>
-    </section>
 
-    <!-- STORY -->
-    <section id="story" class="py-28 px-6 border-t border-gray-800">
-      <div class="max-w-5xl mx-auto space-y-8">
-        <h2 class="text-3xl font-semibold text-indigo-400">About me</h2>
-        <p class="text-gray-400 leading-relaxed text-lg">
-          I'm a backend software engineer who began his career in São Paulo, Brazil, and has been living in Porto, Portugal since 2018. Along the way, I’ve focused on building scalable systems with .NET, cloud platforms, and event-driven architectures — always aiming for clean, resilient, and maintainable solutions.
+      <!-- TEXT -->
+      <div class="text-center md:text-left space-y-6">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+          Hi, I'm <span class="text-indigo-400">Diego Pereira</span>
+        </h1>
+        <p class="text-xl text-gray-400 leading-relaxed max-w-2xl">
+          Senior Backend Software Engineer.
+          Born in São Paulo 🇧🇷 — living in Porto 🇵🇹 since 2018.
+          I build scalable systems and enjoy good coffee, craft beer, and traveling.
         </p>
-        <p class="text-gray-400 leading-relaxed text-lg">
-          Outside of work, I love traveling with my wife, enjoying time with our golden retriever Donna, savoring good coffee and craft beer, and playing or watching football. I believe staying curious — both about technology and the world around us — leads to better software and better decisions.
-        </p>
+
+        <!-- BUTTONS -->
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+          <a href="#story"
+            class="px-6 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20">
+            About me
+          </a>
+          <a href="#tech" class="px-6 py-2 rounded-lg border border-gray-700 hover:border-indigo-400 transition">
+            Tech stack
+          </a>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="flex justify-center md:justify-start gap-6 mt-6">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/dianper" target="_blank"
+            class="text-gray-400 hover:text-indigo-400 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm13 11.25h-3v-5c0-1.25-1-2.25-2.25-2.25s-2.25 1-2.25 2.25v5h-3v-10h3v1.35c.69-.9 1.83-1.35 2.85-1.35 2.25 0 4.15 1.9 4.15 4.25v5.75z" />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/dianper" target="_blank" class="text-gray-400 hover:text-indigo-400 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.333-5.466-5.932 0-1.31.468-2.38 1.236-3.222-.124-.304-.536-1.53.117-3.18 0 0 1.008-.322 3.3 1.23a11.495 11.495 0 0 1 3-.404c1.02.005 2.045.138 3 .404 2.29-1.552 3.296-1.23 3.296-1.23.655 1.65.243 2.876.12 3.18.77.842 1.234 1.913 1.234 3.222 0 4.61-2.804 5.624-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- TECH -->
-    <section
-    id="tech"
-    class="relative py-28 px-6 border-t border-gray-800 overflow-hidden bg-black code-bg"
-    >
+  <!-- STORY -->
+  <section id="story" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <h2 class="text-3xl font-semibold text-indigo-400">About me</h2>
+      <p class="text-gray-400 leading-relaxed text-lg">
+        I'm a backend software engineer who began his career in São Paulo, Brazil, and has been living in Porto,
+        Portugal since 2018. Along the way, I’ve focused on building scalable systems with .NET, cloud platforms, and
+        event-driven architectures — always aiming for clean, resilient, and maintainable solutions.
+      </p>
+      <p class="text-gray-400 leading-relaxed text-lg">
+        Outside of work, I love traveling with my wife, enjoying time with our golden retriever Donna, savoring good
+        coffee and craft beer, and playing or watching football. I believe staying curious — both about technology and
+        the world around us — leads to better software and better decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section id="tech" class="relative py-28 px-6 border-t border-gray-800 overflow-hidden bg-black code-bg">
     <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-cyan-500/10"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Tech stack</h2>
+      <h2 class="text-3xl font-semibold text-indigo-400">Tech stack</h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <!-- Backend -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">Backend & Platforms</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">Backend & Platforms</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             C#, .NET Framework, .NET Core, .NET 8+, ASP.NET, Event-Driven Systems, Microservices
-            </p>
+          </p>
         </div>
 
         <!-- Cloud -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">Cloud & Infrastructure</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">Cloud & Infrastructure</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             Azure, Azure Functions, Service Bus, Event Grid, Blob Storage, Docker, Argo CD
-            </p>
+          </p>
         </div>
 
         <!-- Data -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">Data & Storage</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">Data & Storage</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             SQL Server, PostgreSQL, Cosmos DB, MongoDB, Cassandra, Redis, Entity Framework
-            </p>
+          </p>
         </div>
 
         <!-- CI/CD -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">CI/CD & Delivery</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">CI/CD & Delivery</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             GitHub Actions, Jenkins, TeamCity, GitHub, GitLab
-            </p>
+          </p>
         </div>
 
         <!-- Observability -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">Observability & Reliability</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">Observability & Reliability</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             Application Insights, New Relic, Grafana, Kibana, Jaeger
-            </p>
+          </p>
         </div>
 
         <!-- Testing -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-2 text-indigo-300">Testing & Quality</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-2 text-indigo-300">Testing & Quality</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             xUnit, Playwright, Selenium, SonarQube, JMeter, BlazeMeter
-            </p>
+          </p>
         </div>
 
         <!-- Architecture -->
-        <div class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition sm:col-span-2 md:col-span-3">
-            <h3 class="font-semibold mb-2 text-indigo-300">Architecture & Practices</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
+        <div
+          class="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-xl hover:border-indigo-400/40 transition sm:col-span-2 md:col-span-3">
+          <h3 class="font-semibold mb-2 text-indigo-300">Architecture & Practices</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
             SOLID, Monoliths, Microservices, ETL, Event-Driven Architecture, Scrum, Kanban
-            </p>
+          </p>
         </div>
 
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="py-28 px-6 border-t border-gray-800">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
     <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Experience & Projects</h2>
-
-        <div class="space-y-6">
+      <h2 class="text-3xl font-semibold text-indigo-400">Experience & Projects</h2>
+      <p class="text-sm text-gray-500 text-center mt-6">
+        Recent experiences — full list available on <a href="https://www.linkedin.com/in/dianper" target="_blank"
+          class="text-indigo-400 hover:underline">LinkedIn</a>.
+      </p>
+      <div class="space-y-6">
 
         <!-- Fortytwo -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-            <h3 class="text-lg font-semibold">Fortytwo · Senior Software Engineer</h3>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+            <h3 class="text-lg font-semibold">Fortytwo</h3>
             <span class="text-sm text-gray-500">Jan 2025 – Present · Remote</span>
-            </div>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-            Specializing in Identity and Access Management (IAM) solutions. My role involves making high-level architectural decisions, leading the development of secure and scalable systems, and ensuring a robust and efficient development lifecycle across various platforms and tools
-            </p>
-            <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
-            <li>Leading architecture design for IAM solutions using .NET 9, Microsoft Identity, and Blazor.</li>
-            <li>Developing secure APIs, implementing comprehensive testing strategies (unit, integration, e2e).</li>
-            <li>Managing CI/CD pipelines with GitHub Actions and automated deployments via Kubernetes (AKS) + ArgoCD.</li>
-            <li>Leveraging Azure Cloud (CosmosDB, AKS) and Docker containerization for high-performance solutions.</li>
-            </ul>
+          </div>
+          <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+            Senior Software Engineer at Fortytwo, designing and building secure, scalable Identity and Access Management
+            (IAM) solutions. Focused on architecture, APIs, cloud infrastructure, and CI/CD automation.
+          </p>
+          <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
+            <li>IAM & Access Management</li>
+            <li>Secure & Scalable Architecture</li>
+            <li>.NET 9 & Blazor</li>
+            <li>Azure Cloud & Kubernetes</li>
+            <li>CI/CD & Automation</li>
+            <li>API Design & Testing</li>
+          </ul>
         </div>
 
         <!-- COOPTELCO -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-            <h3 class="text-lg font-semibold">COOPTELCO · Senior Software Engineer</h3>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+            <h3 class="text-lg font-semibold">Cooptelco</h3>
             <span class="text-sm text-gray-500">Feb 2024 – Dec 2024 · Remote</span>
-            </div>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-            Modernized and improved data processing systems and APIs with cutting-edge technologies to achieve better performance, scalability, and security. Furthermore, my role covers a wide range of responsibilities, from monitoring the entire software life cycle, designing and diagramming the project architecture, implementation and deployment, including monitoring in production.
-            </p>
-            <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
-            <li>Led system architecture design for scalability and maintainability.</li>
-            <li>Implemented Agile practices and collaborated closely with cloud engineers.</li>
-            <li>Built CI/CD pipelines, frameworks to reduce code duplication, and migrated legacy ETL systems.</li>
-            </ul>
+          </div>
+          <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+            Software Engineer at Cooptelco, modernizing data processing systems and APIs with scalable, secure, and high-performance solutions across the full software lifecycle.
+          </p>
+          <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
+            <li>.NET 8</li>
+            <li>System Architecture & Scalability</li>
+            <li>Data Processing & ETL Modernization</li>
+            <li>Cloud Collaboration & Deployment</li>
+            <li>CI/CD & Agile Methodologies</li>
+            <li>Unit & Integration Testing</li>
+            <li>Code Reviews & Best Practices</li>
+          </ul>
         </div>
 
         <!-- Farfetch -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
-            <h3 class="text-lg font-semibold">Farfetch · Senior Software Engineer</h3>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+            <h3 class="text-lg font-semibold">Farfetch</h3>
             <span class="text-sm text-gray-500">Aug 2018 – Feb 2024 · Porto, Portugal · Hybrid</span>
-            </div>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-            Worked in a dynamic ecosystem of microservices, participating in the implementation and maintenance of high-performance functionalities. My role involves not only delivering, but also maintaining and optimizing critical resources, ensuring their consistent and efficient operation within the agile environment.
-            </p>
-            <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
-            <li>Guided team members and conducted code reviews.</li>
-            <li>Designed architecture, created tools to reduce duplicate code, and ran performance tests.</li>
-            <li>Tested, deployed, and monitored applications, and facilitated Agile meetings.</li>
-            </ul>
+          </div>
+          <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+            Software Engineer contributing to high-performance microservices, optimizing critical resources, and ensuring smooth operations in an agile environment.
+          </p>
+          <ul class="mt-2 text-gray-400 text-sm list-disc list-inside space-y-1">
+            <li>.NET 6</li>
+            <li>Microservices & High-Performance Systems</li>
+            <li>Architecture & Code Reviews</li>
+            <li>Documentation & Knowledge Sharing</li>
+            <li>Testing, Deployment & Monitoring</li>
+            <li>Tools & Frameworks for Efficiency</li>
+            <li>Agile Facilitation & Backlog Management</li>
+          </ul>
         </div>
 
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- BOOKS -->
-    <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
-      <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Books & Learning</h2>
+  <section id="blog" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <h2 class="text-3xl font-semibold text-indigo-400">Blog & Writing</h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <div class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-sm text-gray-400">
-            Clean Code — Robert C. Martin
-          </div>
-          <div class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-sm text-gray-400">
-            Clean Architecture — Robert C. Martin
-          </div>
-          <div class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-sm text-gray-400">
-            Head First Design Patterns — Eric Freeman & Elisabeth Robson
-          </div>
-          <div class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-sm text-gray-400">
-            The Pragmatic Programmer — Andrew Hunt & David Thomas
-          </div>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Blog Post 1 -->
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Have you tried .NET Aspire?</h3>
+          <p class="text-sm text-gray-400 mb-2">Discover what .NET Aspire is and how it can be used. This post shows a
+            file-processing workflow built with .NET 9, integrating Azure Services, databases, and cache.</p>
+          <span class="text-xs text-gray-500">Dec 2024</span>
+          <a href="https://medium.com/@dianper/have-you-tried-net-aspire-ce8bc869baeb" target="_blank"
+            class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Embedding Superset Dashboards with ClickHouse Data into
+            .NET Web Application: A Step-by-Step Guide</h3>
+          <p class="text-sm text-gray-400 mb-2">Learn how to embed a Superset dashboard with a ClickHouse dataset into a
+            .NET web application, with a brief introduction to both tools.</p>
+          <span class="text-xs text-gray-500">Apr 2024</span>
+          <a href="https://medium.com/@dianper/embedding-superset-dashboards-with-clickhouse-data-into-net-web-application-a-step-by-step-guide-dcc1bb1c104b"
+            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Implementing GraphQL API Gateway in .NET 6 + Hot
+            Chocolate v12 + Redis</h3>
+          <p class="text-sm text-gray-400 mb-2">Another post in the GraphQL series, showing how to implement a GraphQL
+            API Gateway using the Federated Schema approach.</p>
+          <span class="text-xs text-gray-500">Oct 2022</span>
+          <a href="https://dianper.medium.com/implementing-graphql-api-gateway-in-net-6-hot-chocolate-v12-redis-1a0ac12f340c"
+            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Building GraphQL API in .NET Core + HotChocolate +
+            MongoDB + Docker [Part 2]</h3>
+          <p class="text-sm text-gray-400 mb-2">Part 2 of the GraphQL Web API series. This session covers Mutations and
+            Subscriptions — recommended to read Part 1 first for full context.</p>
+          <span class="text-xs text-gray-500">Apr 2021</span>
+          <a href="https://dianper.medium.com/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-2-ebfb7e7fe3e9"
+            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="text-lg font-semibold mb-2 text-indigo-300">Building GraphQL API in .NET Core + HotChocolate +
+            MongoDB + Docker [Part 1]</h3>
+          <p class="text-sm text-gray-400 mb-2">Learn how to build a GraphQL Web API in .NET Core using HotChocolate and
+            MongoDB, running in Docker. This first part covers queries, types, and resolvers, with Mutations and
+            Subscriptions explained in the next posts.</p>
+          <span class="text-xs text-gray-500">Mar 2021</span>
+          <a href="https://medium.com/@dianper/building-graphql-api-in-net-core-hotchocolate-mongodb-docker-part-1-d00a20eb0ff0"
+            target="_blank" class="mt-2 inline-block text-indigo-400 hover:underline text-sm">Read more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKS -->
+  <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <h2 class="text-3xl font-semibold text-indigo-400">Books & Learning</h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Clean Code</h3>
+          <span class="text-sm text-gray-400">by Robert C. Martin</span>
+          <p class="text-gray-500">A practical guide on writing readable, maintainable, and efficient code. Reinforced best practices and the importance of craftsmanship in software development.</p>
+        </div>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Clean Architecture</h3>
+          <span class="text-sm text-gray-400">by Robert C. Martin</span>
+          <p class="text-gray-500">Explores principles and patterns for designing flexible, maintainable, and scalable software systems. Highlights the importance of separating concerns and building resilient architecture.</p>
+        </div>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Head First Design Patterns</h3>
+          <span class="text-sm text-gray-400">by Eric Freeman & Elisabeth Robson</span>
+          <p class="text-gray-500">An engaging guide to understanding common software design patterns. Focuses on practical examples and real-world applications to improve code structure and maintainability.</p>
+        </div>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">The Pragmatic Programmer</h3>
+          <span class="text-sm text-gray-400">by Andrew Hunt & David Thomas</span>
+          <p class="text-gray-500">A practical guide for software developers on best practices, problem-solving, and continuous improvement. Emphasizes craftsmanship, adaptability, and pragmatic approaches to everyday coding challenges.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
     <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Certifications</h2>
+      <h2 class="text-3xl font-semibold text-indigo-400">Certifications</h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <!-- Microsoft -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="font-semibold text-indigo-300 mb-1">Microsoft</h3>
-            <ul class="text-sm text-gray-400 list list-inside space-y-1">
-            <li>2025 - AZ900: Azure Fundamentals</li>
-            <li>2015 - 70-486: Developing ASP.NET MVC Web Applications</li>
-            </ul>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Microsoft</h3>
+          <ul class="text-sm text-gray-400 list list-inside space-y-1">
+            <li>AZ900: Azure Fundamentals</li>
+            <li>70-486: Developing ASP.NET MVC Web Applications</li>
+          </ul>
         </div>
 
         <!-- MongoDB -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="font-semibold text-indigo-300 mb-1">MongoDB University</h3>
-            <ul class="text-sm text-gray-400 list list-inside space-y-1">
-            <li>2019 - MongoDB Basics</li>
-            </ul>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">MongoDB University</h3>
+          <ul class="text-sm text-gray-400 list list-inside space-y-1">
+            <li>MongoDB Basics</li>
+          </ul>
         </div>
 
         <!-- NDC Conferences -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="font-semibold text-indigo-300 mb-1">NDC Conferences</h3>
-            <ul class="text-sm text-gray-400 list list-inside space-y-1">
-            <li>2024 - Building scalable, cloud native, distributed systems in .NET</li>
-            <li>2022 - Building Modern Applications with GraphQL using ASP.NET 6</li>
-            </ul>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">NDC Conferences</h3>
+          <ul class="text-sm text-gray-400 list list-inside space-y-1">
+            <li>Building scalable, cloud native, distributed systems in .NET</li>
+            <li>Building Modern Applications with GraphQL using ASP.NET 6</li>
+          </ul>
         </div>
 
         <!-- Coursera -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="font-semibold text-indigo-300 mb-1">Coursera</h3>
-            <ul class="text-sm text-gray-400 list list-inside space-y-1">
-            <li>2020 - Service-Oriented Architecture</li>
-            <li>2020 - Design Patterns</li>
-            <li>2020 - Object-Oriented Design</li>
-            </ul>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Coursera</h3>
+          <ul class="text-sm text-gray-400 list list-inside space-y-1">
+            <li>Service-Oriented Architecture</li>
+            <li>Design Patterns</li>
+            <li>Object-Oriented Design</li>
+          </ul>
         </div>
 
         <!-- Udemy -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="font-semibold text-indigo-300 mb-1">Udemy</h3>
-            <ul class="text-sm text-gray-400 list list-inside space-y-1">
-            <li>2021 - High Performance Coding with .NET Core and C#</li>
-            <li>2021 - Performance Testing Course with JMeter and Blazemeter</li>
-            <li>2021 - Docker and Kubernetes: The Complete Guide</li>
-            <li>2020 - Microservices Architecture and Implementation on .NET 5</li>
-            <li>2020 - Microservices: Designing Highly Scalable Systems</li>
-            </ul>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <h3 class="font-semibold text-indigo-300 mb-1">Udemy</h3>
+          <ul class="text-sm text-gray-400 list list-inside space-y-1">
+            <li>High Performance Coding with .NET Core and C#</li>
+            <li>Performance Testing Course with JMeter and Blazemeter</li>
+            <li>Docker and Kubernetes: The Complete Guide</li>
+            <li>Microservices Architecture and Implementation on .NET 5</li>
+            <li>Microservices: Designing Highly Scalable Systems</li>
+          </ul>
         </div>
 
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- EVENTS -->
-    <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
-      <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Events & Conferences</h2>
+  <!-- EVENTS -->
+  <!--
+  <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <h2 class="text-3xl font-semibold text-indigo-400">Events & Conferences</h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-          <div class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-gray-400">
-            NDC Conferences 2022 & 2024
-          </div>          
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+        <div
+          class="p-4 rounded-lg bg-gray-900 border border-gray-800 hover:border-indigo-400/40 transition text-gray-400">
+          NDC Conferences 2022 & 2024
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  -->
 
-    <!-- EDUCATION -->
-    <section id="education" class="py-28 px-6 border-t border-gray-800">
+  <!-- EDUCATION -->
+  <section id="education" class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
     <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Education</h2>
+      <h2 class="text-3xl font-semibold text-indigo-400">Education</h2>
 
-        <div class="space-y-6">
+      <div class="space-y-6">
 
         <!-- Instituto Superior de Engenharia do Porto -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="text-lg font-semibold">Instituto Superior de Engenharia do Porto</h3>
-            <p class="text-sm text-gray-400">Postgraduate Degree, Computer Software Engineering</p>
-            <span class="text-sm text-gray-500">Sep 2021 – Jul 2022</span>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <span class="text-sm text-gray-500">2021 – 2022</span>
+          <h3 class="text-lg font-semibold">Instituto Superior de Engenharia do Porto</h3>
+          <p class="text-sm text-gray-400">Postgraduate Degree, Computer Software Engineering</p>
         </div>
 
         <!-- Universidade Cruzeiro do Sul -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
-            <h3 class="text-lg font-semibold">Universidade Cruzeiro do Sul</h3>
-            <p class="text-sm text-gray-400">Technologist in Software Development and Systems Analysis</p>
-            <span class="text-sm text-gray-500">2015 – 2017</span>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/30 transition">
+          <span class="text-sm text-gray-500">2015 – 2017</span>
+          <h3 class="text-lg font-semibold">Universidade Cruzeiro do Sul</h3>
+          <p class="text-sm text-gray-400">Technologist in Software Development and Systems Analysis</p>
         </div>
 
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- HOBBIES -->
-    <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
+  <!-- HOBBIES -->
+  <section class="py-28 px-6 border-t border-gray-800 bg-gradient-to-b from-black to-gray-950">
     <div class="max-w-5xl mx-auto space-y-12">
-        <h2 class="text-3xl font-semibold text-indigo-400">Beyond Code</h2>
+      <h2 class="text-3xl font-semibold text-indigo-400">Beyond Code</h2>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <!-- Husband & Parent -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-1">❤️ Husband & Dad</h3>
-            <p class="text-sm text-gray-400">I love spending time with my wife, caring for our golden retriever Donna, and enjoying family life with our son Bernardo. Family comes first — building memories, sharing laughter, and supporting each other every day.</p>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-1">❤️ Husband & Dad</h3>
+          <p class="text-sm text-gray-400">I love spending time with my wife, caring for our golden retriever Donna, and preparing to welcome our son Bernardo into our family. Family comes first — building memories, sharing laughter, and supporting each other every day.</p>
         </div>
 
         <!-- Golden Retriever -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-1">🐕 Donna, my Golden Retriever</h3>
-            <p class="text-sm text-gray-400">Long walks, parks, and plenty of fur everywhere — Donna is 5 years old!</p>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-1">🐕 Donna, our Golden Retriever</h3>
+          <p class="text-sm text-gray-400">Donna, our 5-year-old golden retriever, is sweet and calm, loves trips to the beach, playing with her dog friends, and filling our home with love — though car rides aren’t her favorite.</p>
         </div>
 
         <!-- Traveling -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-1">✈️ Traveling</h3>
-            <p class="text-sm text-gray-400">Exploring cities, cultures, and food whenever possible.</p>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-1">✈️ Traveling</h3>
+          <p class="text-sm text-gray-400">Every trip is a chance to explore, taste, and connect with the world around us.</p>
         </div>
 
         <!-- Coffee & Craft Beer -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-1">🍺 Craft Beer & ☕ Coffee</h3>
-            <p class="text-sm text-gray-400">Always happy to talk about breweries, espresso, and tasting new flavors.</p>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-1">🍺 Craft Beer, 🍷 Wine & ☕ Coffee</h3>
+          <p class="text-sm text-gray-400">Whether it’s a craft beer, a fine wine, or a strong espresso, I love enjoying it with family and friends — and swapping tasting notes whenever I can.</p>
         </div>
 
         <!-- Football -->
-        <div class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
-            <h3 class="font-semibold mb-1">⚽ Football</h3>
-            <p class="text-sm text-gray-400">
-            Watching, debating, suffering, and celebrating football — and playing as an amateur in my local neighborhood team.
-            </p>
+        <div
+          class="p-6 rounded-xl bg-gray-900/70 backdrop-blur border border-gray-800 hover:border-indigo-400/40 transition">
+          <h3 class="font-semibold mb-1">⚽ Football</h3>
+          <p class="text-sm text-gray-400"> Watching, debating, suffering, and celebrating football — and playing as an amateur in my local neighborhood team.</p>
         </div>
 
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="py-12 px-6 border-t border-gray-800 text-center text-sm text-gray-500">
-      <p>© <span id="year"></span> Diego Pereira — Built with ❤️ & code</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 border-t border-gray-800 text-center text-sm text-gray-500">
+    <p>© <span id="year"></span> Diego Pereira — Built with ❤️ & code</p>
+  </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
